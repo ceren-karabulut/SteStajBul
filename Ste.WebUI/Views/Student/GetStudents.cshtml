@@ -1,0 +1,50 @@
+﻿@model List<StudentViewModel>
+@{
+    ViewData["Title"] = "GetStudents";
+}
+
+<h1>Başvurular</h1>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col"><h5><strong>Ad</strong></h5></div>
+        <div class="col"><h5><strong>Email</strong></h5></div>
+        <div class="col"><h5><strong>Universite</strong></h5></div>
+        <div class="col"> <h5><strong>Bölüm</strong></h5></div>
+        <div class="col"><h5><strong>Mezuniyet Tarihi</strong></h5></div>
+        <div class="col"><h5><strong>Staj Günü</strong></h5></div>
+        <div class="col"><h5><strong>Hakkında</strong></h5></div>
+        <div class="col"><h5><strong>Şehir</strong></h5></div>
+        <div class="col"><h5><strong>Telefon</strong></h5></div>
+
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div class="col-sm">
+            
+        </div>
+        <div class="row">
+            <div class="col"><p>@item.Name</p></div>
+            <br />
+            <div class="col"><p>@item.Email</p></div>
+            <br />
+            <div class="col"><p class="text-center">@item.University</p></div>
+            <br />
+            <div class="col"><p>@item.Section</p></div>
+            <br />
+            <div class="col"><p>@item.DateOfGraduation</p></div>
+            <br />
+            <div class="col"><p class="text-center">@item.DayOfIntern</p></div>
+            <br />
+            <div class="col"><p class="text-center">@item.Bio</p></div>
+            <br />
+            <div class="col"><p>@item.City</p></div>
+            <br />
+            <div class="col"><p class="text-center">@item.Telephone</p></div>
+            <br />
+            <a href="/Student/Delete?id=@item.StudentId" class="text-danger font-weight-bold">SİL</a>
+        </div>
+    }
+</div>
+

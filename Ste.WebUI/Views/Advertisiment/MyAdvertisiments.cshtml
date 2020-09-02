@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AdvertisimentUpdateViewModel>
+@using Microsoft.AspNetCore.Identity
+@using Ste.Data.Entities
+@inject UserManager<CompanyUser> UserManager
+@inject SignInManager<CompanyUser> SignInManager
+@{
+    ViewData["Title"] = "MyAdvertisiments";
+}
+
+@*@if (SignInManager.IsSignedIn(User))
+{
+    var user = await UserManager.GetUserAsync(User);*@
+
+    <h1>İlanlarım</h1>
+    <br />
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-2"><h3><strong>Pozisyon</strong></h3></div>
+            <div class="col-md-2"><h3><strong>Şehir</strong></h3></div>
+            <div class="col-md-2"><h3><strong>İş Tanımı</strong></h3></div>
+            <div class="col-md-2"><h3><strong>Alınacak Öğrenci</strong></h3></div>
+        </div>
+
+        @foreach (var item in Model)
+        {
+
+            <div class="row">
+
+                <div class="col-md-2"><p>@item.JobTitle</p></div>
+                <div class="col-md-2"><p>@item.City</p></div>
+                <div class="col-md-2"><p>@item.JobDesc</p></div>
+                <div class="col-md-2"><p class="text-center">@item.NumberOfStudents</p></div>
+                <div class="col-md-1"> <a class="btn btn-info btn-sm" href="/Student/GetStudents?id=@item.AdvertisimentId">Başvurular</a></div>
+                <div class="col-md-1"> <a class="btn btn-warning btn-sm" href="/Advertisiment/Edit?id=@item.AdvertisimentId">Güncelle</a></div>
+                <div class="col-md-1"><a class="btn btn-danger btn-sm" href="/Advertisiment/Delete?id=@item.AdvertisimentId">Sil </a></div>
+            </div>
+        }
+    </div>
+
+
+
+
+
+

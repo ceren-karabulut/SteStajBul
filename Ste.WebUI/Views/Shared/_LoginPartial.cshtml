@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Ste.Data.Entities
+@inject SignInManager<CompanyUser> SignInManager
+@inject UserManager<CompanyUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var loggedUser = await UserManager.GetUserAsync(User);
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> @loggedUser.CompanyName</a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="nav-link btn btn-link text-dark">Çıkış Yap</button>
+                </form>
+           
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Üye Ol</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Giriş Yap</a>
+            </li>
+
+        @*<li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="User" asp-action="Register">Kaydol</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="User" asp-action="Login">Giriş Yap</a>
+        </li>*@
+    }
+</ul>

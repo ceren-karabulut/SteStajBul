@@ -1,0 +1,12 @@
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\bin\Debug\netcoreapp3.1\Ste.Repository.deps.json
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\bin\Debug\netcoreapp3.1\Ste.Repository.dll
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\bin\Debug\netcoreapp3.1\Ste.Repository.pdb
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\bin\Debug\netcoreapp3.1\Ste.Data.dll
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\bin\Debug\netcoreapp3.1\Ste.Data.pdb
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\obj\Debug\netcoreapp3.1\Ste.Repository.csprojAssemblyReference.cache
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\obj\Debug\netcoreapp3.1\Ste.Repository.AssemblyInfoInputs.cache
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\obj\Debug\netcoreapp3.1\Ste.Repository.AssemblyInfo.cs
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\obj\Debug\netcoreapp3.1\Ste.Repository.csproj.CoreCompileInputs.cache
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\obj\Debug\netcoreapp3.1\Ste.Repository.csproj.CopyComplete
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\obj\Debug\netcoreapp3.1\Ste.Repository.dll
+C:\Users\hotta\source\repos\SteStaj\Ste.Repository\obj\Debug\netcoreapp3.1\Ste.Repository.pdb

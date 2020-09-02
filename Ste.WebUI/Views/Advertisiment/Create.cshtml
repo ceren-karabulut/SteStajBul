@@ -1,0 +1,67 @@
+﻿@model AdvertisimentAddViewModel
+@using Microsoft.AspNetCore.Identity
+@using Ste.Data.Entities
+@inject UserManager<CompanyUser> UserManager
+@inject SignInManager<CompanyUser> SignInManager
+@{
+    ViewData["Title"] = "Create";
+}
+
+@if (SignInManager.IsSignedIn(User))
+{
+    var user =  await UserManager.GetUserAsync(User);
+
+<h1>İlan Oluştur</h1>
+@if (ViewBag.AffectedRowCount > 0)
+{
+    <div class="alert alert-success" >
+        <p>İlanınız oluşturuldu.</p>
+    </div>
+}
+@using (Html.BeginForm(FormMethod.Post))
+{
+<div class="container">
+    <div class="form-group row">
+        @Html.LabelFor(x => x.CompanyName, "Firma Adı", new { @class = "col-md-4 col-form-label " })
+        <p>@user.CompanyName</p>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.JobTitle, "Pozisyon", new { @class = "col-md-4 col-form-label " })
+        @Html.TextBoxFor(x => x.JobTitle, "Web Geliştirici", new { @placeholder="Örn web geliştirme stajyeri",@class = "col-md-4" })
+        @Html.ValidationMessageFor(x=>x.JobTitle)
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.City, "Şehir", new { @class = "col-md-4 col-form-label" })
+        @Html.TextBoxFor(x => x.City, null, new { @class = "col-md-4" })
+        @Html.ValidationMessageFor(x=>x.City)
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.JobDesc, "İş Tanımı", new { @class = "col-md-4 col-form-label" })
+        @Html.TextAreaFor(x=>x.JobDesc,new {@placeholder="İstenilen nitelikler.Örn Bilgisayar Mühendisliği öğrencisi", @class = "col-md-4" })
+        @Html.ValidationMessageFor(x=>x.JobDesc)
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.NumberOfStudents, "Alınacak Öğrenci Sayısı", new { @class = "col-md-4 col-form-label" })
+        @Html.TextBoxFor(x => x.NumberOfStudents, null, new { @class = "col-md-4" })
+        @Html.ValidationMessageFor(x =>x.NumberOfStudents)
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.Adress, "Adres", new { @class = "col-md-4 col-form-label" })
+        <p>@user.AdressDetail</p>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success" type="submit">Kaydet</button>
+    </div>
+</div>
+} 
+
+} else { 
+   
+<h1>İlan verebilmek için lütfen oturum açın veya üye olun!</h1>
+
+}

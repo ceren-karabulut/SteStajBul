@@ -1,0 +1,79 @@
+﻿@model StudentViewModel
+@{
+    ViewData["Title"] = "Apply";
+}
+
+<h1>İlan Başvuru</h1>
+
+@if (ViewBag.AffectedRowCount > 0)
+{
+    <div class="alert alert-success">
+        <p>Başvurunuz başarıyla oluşturuldu.</p>
+    </div>
+}
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <div class="container">
+
+        @Html.Hidden("int")
+
+        <div class="form-group row">
+            @Html.LabelFor(x => x.Name, "Ad Soyad", new { @class = "col-md-4 col-form-label " })
+            @Html.TextBoxFor(x => x.Name, null, new { @class = "col-md-4" })
+            @Html.ValidationMessageFor(x => x.Name)
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(x => x.Email, "Email", new { @class = "col-md-4 col-form-label" })
+            @Html.TextBoxFor(x => x.Email, null, new { @class = "col-md-4" })
+            @Html.ValidationMessageFor(x => x.Email)
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(x => x.DateOfGraduation, "Mezuniyet Tarihi", new { @class = "col-md-4 col-form-label" })
+            @Html.TextBoxFor(x => x.DateOfGraduation, "MM/dd/yyyy", new { @type = "date", @class = "col -md-4" })
+            @Html.ValidationMessageFor(x => x.DateOfGraduation)
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(x => x.University, "Üniversiteniz", new { @class = "col-md-4 col-form-label" })
+            @Html.TextBoxFor(x => x.University, null, new { @class = "col-md-4" })
+            @Html.ValidationMessageFor(x => x.University)
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(x => x.Section, "Bölümünüz", new { @class = "col-md-4 col-form-label" })
+            @Html.TextBoxFor(x => x.Section, null, new { @class = "col-md-4" })
+            @Html.ValidationMessageFor(x => x.Section)
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(x => x.Bio, "Biyografi", new { @class = "col-md-4 col-form-label" })
+            @Html.TextAreaFor(x => x.Bio, new { @placeholder = "Bildiğiniz teknolojiler", @class = "col-md-4" })
+            @Html.ValidationMessageFor(x => x.Bio)
+        </div>
+
+
+        <div class="form-group row">
+            @Html.LabelFor(x => x.DayOfIntern, "Staj Günü", new { @class = "col-md-4 col-form-label" })
+            @Html.TextBoxFor(x => x.DayOfIntern, null, new { @type = "number", @class = "col-md-4" })
+            @Html.ValidationMessageFor(x => x.DayOfIntern)
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(x => x.City, "Şehriniz", new { @class = "col-md-4 col-form-label" })
+            @Html.TextBoxFor(x => x.City, null, new { @class = "col-md-4" })
+            @Html.ValidationMessageFor(x => x.City)
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(x => x.Telephone, "Telefon Numaranız", new { @class = "col-md-4 col-form-label" })
+            @Html.TextBoxFor(x => x.Telephone, null, new { @class = "col-md-4" })
+            @Html.ValidationMessageFor(x => x.Telephone)
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" type="submit">Başvur</button>
+        </div>
+    </div>
+}
+

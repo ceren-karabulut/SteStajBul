@@ -1,0 +1,12 @@
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\bin\Debug\netcoreapp3.1\Ste.Data.deps.json
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\bin\Debug\netcoreapp3.1\Ste.Data.runtimeconfig.json
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\bin\Debug\netcoreapp3.1\Ste.Data.runtimeconfig.dev.json
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\bin\Debug\netcoreapp3.1\Ste.Data.dll
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\bin\Debug\netcoreapp3.1\Ste.Data.pdb
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\obj\Debug\netcoreapp3.1\Ste.Data.csprojAssemblyReference.cache
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\obj\Debug\netcoreapp3.1\Ste.Data.AssemblyInfoInputs.cache
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\obj\Debug\netcoreapp3.1\Ste.Data.AssemblyInfo.cs
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\obj\Debug\netcoreapp3.1\Ste.Data.csproj.CoreCompileInputs.cache
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\obj\Debug\netcoreapp3.1\Ste.Data.dll
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\obj\Debug\netcoreapp3.1\Ste.Data.pdb
+C:\Users\hotta\source\repos\SteStaj\Ste.Data\obj\Debug\netcoreapp3.1\Ste.Data.genruntimeconfig.cache

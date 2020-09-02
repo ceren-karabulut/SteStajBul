@@ -1,0 +1,51 @@
+﻿@model AdvertisimentListViewModel
+@{
+    ViewData["Title"] = "Get";
+}
+
+<h1>İlan Detayı</h1>
+<br />
+
+
+<div class="container" style="font-size:large">
+    <div >
+        @Html.LabelFor(x => x.CompanyName, "Firma Adı:", new { @class = "col-md-3 col-form-label" })
+        @Html.DisplayFor(x => x.CompanyName)
+    </div>
+
+    <div >
+            @Html.LabelFor(x => x.Email, "Email", new { @class = "col-md-3 col-form-label" })
+            @Html.DisplayFor(x => x.Email)
+        </div>
+
+    <div >
+        @Html.LabelFor(x => x.JobTitle, "Pozizyon:", new { @class = "col-md-3 col-form-label " })
+        @Html.DisplayFor(x => x.JobTitle ,new {@class="text-black-50" })
+    </div>
+
+    <div >
+        @Html.LabelFor(x => x.JobDesc, "İş Tanımı:", new { @class = "col-md-3 col-form-label" })
+        @Html.DisplayFor(x => x.JobDesc)
+    </div>
+
+    <div >
+        @Html.LabelFor(x => x.NumberOfStudents, "Alınacak Öğrenci Sayısı:", new { @class = "col-md-3  col-form-label" })
+        @Html.DisplayFor(x => x.NumberOfStudents)
+    </div>
+
+
+    <div>
+        @Html.LabelFor(x => x.City, "Şehir:", new { @class = "col-md-3 col-form-label " })
+        @Html.DisplayFor(x => x.City)
+    </div>
+
+    <div >
+        @Html.LabelFor(x => x.Adress, "Adress:", new { @class = "col-md-3 col-form-label " })
+        @Html.DisplayFor(x => x.Adress)
+    </div>
+    <br />
+    <div  class="row">
+        <a style="margin-left:290px;" , class="btn btn-success btn-lg " href="/Student/Apply?id=@Model.AdvertisimentId">Başvur</a>
+    </div>
+        
+</div>
